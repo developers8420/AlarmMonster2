@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AlarmMonster.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BDEB7ED21C68A59200B162F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDEB7EE91C68A59200B162F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDEB7EF41C68A59200B162F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
