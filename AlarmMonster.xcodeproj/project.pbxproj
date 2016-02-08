@@ -15,6 +15,15 @@
 		BDEB7EE41C68A59200B162F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEB7EE21C68A59200B162F6 /* LaunchScreen.storyboard */; };
 		BDEB7EEF1C68A59200B162F6 /* AlarmMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7EEE1C68A59200B162F6 /* AlarmMonsterTests.swift */; };
 		BDEB7EFA1C68A59200B162F6 /* AlarmMonsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7EF91C68A59200B162F6 /* AlarmMonsterUITests.swift */; };
+		BDEB7F0C1C68A6EF00B162F6 /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F0B1C68A6EF00B162F6 /* FoundationViewController.swift */; };
+		BDEB7F0E1C68A70A00B162F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F0D1C68A70A00B162F6 /* HomeViewController.swift */; };
+		BDEB7F101C68A72B00B162F6 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F0F1C68A72B00B162F6 /* AlarmSettingViewController.swift */; };
+		BDEB7F121C68A74700B162F6 /* MonsterSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F111C68A74700B162F6 /* MonsterSettingViewController.swift */; };
+		BDEB7F141C68A77B00B162F6 /* ConfiguredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F131C68A77B00B162F6 /* ConfiguredViewController.swift */; };
+		BDEB7F161C68A7B400B162F6 /* ConfiguredTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F151C68A7B400B162F6 /* ConfiguredTableView.swift */; };
+		BDEB7F181C68A81B00B162F6 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */; };
+		BDEB7F1A1C68A82D00B162F6 /* SwitchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */; };
+		BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		BDEB7EF51C68A59200B162F6 /* AlarmMonsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmMonsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEB7EF91C68A59200B162F6 /* AlarmMonsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmMonsterUITests.swift; sourceTree = "<group>"; };
 		BDEB7EFB1C68A59200B162F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEB7F0B1C68A6EF00B162F6 /* FoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationViewController.swift; sourceTree = "<group>"; };
+		BDEB7F0D1C68A70A00B162F6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BDEB7F0F1C68A72B00B162F6 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		BDEB7F111C68A74700B162F6 /* MonsterSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterSettingViewController.swift; sourceTree = "<group>"; };
+		BDEB7F131C68A77B00B162F6 /* ConfiguredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredViewController.swift; sourceTree = "<group>"; };
+		BDEB7F151C68A7B400B162F6 /* ConfiguredTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredTableView.swift; sourceTree = "<group>"; };
+		BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchFactory.swift; sourceTree = "<group>"; };
+		BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				BDEB7ED61C68A59200B162F6 /* AppDelegate.swift */,
+				BDEB7F071C68A66300B162F6 /* UIParts */,
+				BDEB7F081C68A67C00B162F6 /* Model */,
+				BDEB7F091C68A68700B162F6 /* View */,
+				BDEB7F0A1C68A68D00B162F6 /* Controller */,
 				BDEB7ED81C68A59200B162F6 /* ViewController.swift */,
 				BDEB7EDA1C68A59200B162F6 /* Main.storyboard */,
 				BDEB7EE01C68A59200B162F6 /* Assets.xcassets */,
@@ -126,6 +148,43 @@
 				BDEB7EFB1C68A59200B162F6 /* Info.plist */,
 			);
 			path = AlarmMonsterUITests;
+			sourceTree = "<group>";
+		};
+		BDEB7F071C68A66300B162F6 /* UIParts */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */,
+				BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */,
+				BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */,
+			);
+			name = UIParts;
+			sourceTree = "<group>";
+		};
+		BDEB7F081C68A67C00B162F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BDEB7F091C68A68700B162F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB7F151C68A7B400B162F6 /* ConfiguredTableView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BDEB7F0A1C68A68D00B162F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB7F0B1C68A6EF00B162F6 /* FoundationViewController.swift */,
+				BDEB7F0D1C68A70A00B162F6 /* HomeViewController.swift */,
+				BDEB7F0F1C68A72B00B162F6 /* AlarmSettingViewController.swift */,
+				BDEB7F111C68A74700B162F6 /* MonsterSettingViewController.swift */,
+				BDEB7F131C68A77B00B162F6 /* ConfiguredViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEB7F0E1C68A70A00B162F6 /* HomeViewController.swift in Sources */,
 				BDEB7ED91C68A59200B162F6 /* ViewController.swift in Sources */,
+				BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */,
+				BDEB7F161C68A7B400B162F6 /* ConfiguredTableView.swift in Sources */,
+				BDEB7F181C68A81B00B162F6 /* LabelFactory.swift in Sources */,
+				BDEB7F121C68A74700B162F6 /* MonsterSettingViewController.swift in Sources */,
+				BDEB7F101C68A72B00B162F6 /* AlarmSettingViewController.swift in Sources */,
+				BDEB7F1A1C68A82D00B162F6 /* SwitchFactory.swift in Sources */,
 				BDEB7EDF1C68A59200B162F6 /* AlarmMonster.xcdatamodeld in Sources */,
 				BDEB7ED71C68A59200B162F6 /* AppDelegate.swift in Sources */,
+				BDEB7F141C68A77B00B162F6 /* ConfiguredViewController.swift in Sources */,
+				BDEB7F0C1C68A6EF00B162F6 /* FoundationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
