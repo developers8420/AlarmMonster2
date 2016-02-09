@@ -6,4 +6,13 @@
 //  Copyright © 2016年 Shun Uehara. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeViewController: FoundationViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
