@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1D66191C6B547000BF11E5 /* めざまし時計アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = BD1D66161C6B547000BF11E5 /* めざまし時計アイコン.png */; };
+		BD1D661A1C6B547000BF11E5 /* わたあめ1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD1D66171C6B547000BF11E5 /* わたあめ1.png */; };
+		BD1D661B1C6B547000BF11E5 /* 設定アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = BD1D66181C6B547000BF11E5 /* 設定アイコン.png */; };
 		BDEB7ED71C68A59200B162F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7ED61C68A59200B162F6 /* AppDelegate.swift */; };
 		BDEB7EDC1C68A59200B162F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEB7EDA1C68A59200B162F6 /* Main.storyboard */; };
 		BDEB7EDF1C68A59200B162F6 /* AlarmMonster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7EDD1C68A59200B162F6 /* AlarmMonster.xcdatamodeld */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD1D66161C6B547000BF11E5 /* めざまし時計アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "めざまし時計アイコン.png"; sourceTree = "<group>"; };
+		BD1D66171C6B547000BF11E5 /* わたあめ1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "わたあめ1.png"; sourceTree = "<group>"; };
+		BD1D66181C6B547000BF11E5 /* 設定アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "設定アイコン.png"; sourceTree = "<group>"; };
 		BDEB7ED31C68A59200B162F6 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEB7ED61C68A59200B162F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDEB7EDB1C68A59200B162F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1D66151C6B541F00BF11E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD1D66161C6B547000BF11E5 /* めざまし時計アイコン.png */,
+				BD1D66171C6B547000BF11E5 /* わたあめ1.png */,
+				BD1D66181C6B547000BF11E5 /* 設定アイコン.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BDEB7ECA1C68A59200B162F6 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +143,7 @@
 				BDEB7EE21C68A59200B162F6 /* LaunchScreen.storyboard */,
 				BDEB7EE51C68A59200B162F6 /* Info.plist */,
 				BDEB7EDD1C68A59200B162F6 /* AlarmMonster.xcdatamodeld */,
+				BD1D66151C6B541F00BF11E5 /* Supporting Files */,
 			);
 			path = AlarmMonster;
 			sourceTree = "<group>";
@@ -291,6 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1D66191C6B547000BF11E5 /* めざまし時計アイコン.png in Resources */,
+				BD1D661A1C6B547000BF11E5 /* わたあめ1.png in Resources */,
+				BD1D661B1C6B547000BF11E5 /* 設定アイコン.png in Resources */,
 				BDEB7EE41C68A59200B162F6 /* LaunchScreen.storyboard in Resources */,
 				BDEB7EE11C68A59200B162F6 /* Assets.xcassets in Resources */,
 				BDEB7EDC1C68A59200B162F6 /* Main.storyboard in Resources */,
@@ -554,6 +574,7 @@
 				BDEB7F001C68A59200B162F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDEB7F011C68A59200B162F6 /* Build configuration list for PBXNativeTarget "AlarmMonsterTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +583,7 @@
 				BDEB7F031C68A59200B162F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDEB7F041C68A59200B162F6 /* Build configuration list for PBXNativeTarget "AlarmMonsterUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +592,7 @@
 				BDEB7F061C68A59200B162F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

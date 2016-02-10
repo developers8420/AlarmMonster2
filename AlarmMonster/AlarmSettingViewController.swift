@@ -36,6 +36,14 @@ class AlarmSettingViewController: FoundationViewController {
         datePicker?.locale = NSLocale(localeIdentifier: "ja_JP")
         // AlarmSettingViewControllerへDatePickerの配置
         self.view.addSubview(datePicker!)
+        
+        // 決定ボタンの設定
+        var resultRect:CGRect = CGRectMake(
+            self.defaultX,
+            self.defaultY + (datePicker?.frame.size.height)!,
+            self.defaultWidth,
+            60)
+        
     }
     
     override func didReceiveMemoryWarning() {
