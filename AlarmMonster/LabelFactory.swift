@@ -9,8 +9,14 @@
 import UIKit
 
 class LabelFactory: UILabel {
-    func planeLabel(rect:CGRect, text:NSString, font:UIFont, textColor:UIColor, textAlignment:NSTextAlignment, backgroundColor:UIColor, cornerRadius:CGFloat) -> UILabel {
-        let label:UILabel = self.label(
+    func planeLabel(rect:CGRect,
+                    text:NSString,
+                    font:UIFont,
+                    textColor:UIColor,
+                    textAlignment:NSTextAlignment,
+                    backgroundColor:UIColor,
+                    cornerRadius:CGFloat) -> UILabel {
+        let label:UILabel = self.makeLabel(
             rect,
             text: text,
             font: font,
@@ -20,8 +26,14 @@ class LabelFactory: UILabel {
         return label
     }
     
-    func roundRectLabel(rect:CGRect, text:NSString, font:UIFont, textColor:UIColor, textAlignment:NSTextAlignment, backgroundColor:UIColor, cornerRadius:CGFloat) -> UILabel {
-        let label:UILabel = self.label(
+    func roundRectLabel(rect:CGRect,
+                        text:NSString,
+                        font:UIFont,
+                        textColor:UIColor,
+                        textAlignment:NSTextAlignment,
+                        backgroundColor:UIColor,
+                        cornerRadius:CGFloat) -> UILabel {
+        let label:UILabel = self.makeLabel(
             rect,
             text: text,
             font: font,
@@ -33,7 +45,12 @@ class LabelFactory: UILabel {
         return label
     }
     
-    func label(rect:CGRect, text:NSString, font:UIFont, textColor:UIColor, textAlignment:NSTextAlignment, backgroundColor:UIColor) -> UILabel {
+    func makeLabel(rect:CGRect,
+                   text:NSString,
+                   font:UIFont,
+                   textColor:UIColor,
+                   textAlignment:NSTextAlignment,
+                   backgroundColor:UIColor) -> UILabel {
         let label:UILabel = UILabel(frame: rect)
         label.text = text as String
         label.font = font

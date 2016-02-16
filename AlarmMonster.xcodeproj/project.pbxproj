@@ -26,7 +26,15 @@
 		BDEB7F181C68A81B00B162F6 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */; };
 		BDEB7F1A1C68A82D00B162F6 /* SwitchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */; };
 		BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */; };
-		BDEB7F1E1C68B4B200B162F6 /* UserDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F1D1C68B4B200B162F6 /* UserDefaultModel.swift */; };
+		BDF56A981C71E26500373A90 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF56A971C71E26500373A90 /* libsqlite3.dylib */; };
+		BDF56A9A1C71E29600373A90 /* AlarmDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF56A991C71E29600373A90 /* AlarmDBHelper.swift */; };
+		BDF56AA91C71E34F00373A90 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56A9E1C71E34F00373A90 /* FMDatabase.m */; };
+		BDF56AAA1C71E34F00373A90 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56AA01C71E34F00373A90 /* FMDatabaseAdditions.m */; };
+		BDF56AAB1C71E34F00373A90 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56AA21C71E34F00373A90 /* FMDatabasePool.m */; };
+		BDF56AAC1C71E34F00373A90 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56AA41C71E34F00373A90 /* FMDatabaseQueue.m */; };
+		BDF56AAD1C71E34F00373A90 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56AA71C71E34F00373A90 /* FMResultSet.m */; };
+		BDF56AAE1C71E34F00373A90 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDF56AA81C71E34F00373A90 /* Info.plist */; };
+		BDF56AB01C71E56900373A90 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF56AAF1C71E56900373A90 /* AlarmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +80,22 @@
 		BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchFactory.swift; sourceTree = "<group>"; };
 		BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
-		BDEB7F1D1C68B4B200B162F6 /* UserDefaultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultModel.swift; sourceTree = "<group>"; };
+		BDF56A971C71E26500373A90 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		BDF56A991C71E29600373A90 /* AlarmDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDBHelper.swift; sourceTree = "<group>"; };
+		BDF56A9C1C71E34F00373A90 /* AlarmMonster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmMonster-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		BDF56A9D1C71E34F00373A90 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabase.h"; sourceTree = "<group>"; };
+		BDF56A9E1C71E34F00373A90 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabase.m"; sourceTree = "<group>"; };
+		BDF56A9F1C71E34F00373A90 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
+		BDF56AA01C71E34F00373A90 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.m"; sourceTree = "<group>"; };
+		BDF56AA11C71E34F00373A90 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.h"; sourceTree = "<group>"; };
+		BDF56AA21C71E34F00373A90 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.m"; sourceTree = "<group>"; };
+		BDF56AA31C71E34F00373A90 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.h"; sourceTree = "<group>"; };
+		BDF56AA41C71E34F00373A90 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.m"; sourceTree = "<group>"; };
+		BDF56AA51C71E34F00373A90 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDB.h"; sourceTree = "<group>"; };
+		BDF56AA61C71E34F00373A90 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
+		BDF56AA71C71E34F00373A90 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
+		BDF56AA81C71E34F00373A90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../Downloads/fmdb-master/src/fmdb/Info.plist"; sourceTree = "<group>"; };
+		BDF56AAF1C71E56900373A90 /* AlarmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF56A981C71E26500373A90 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +137,7 @@
 		BDEB7ECA1C68A59200B162F6 = {
 			isa = PBXGroup;
 			children = (
+				BDF56A971C71E26500373A90 /* libsqlite3.dylib */,
 				BDEB7ED51C68A59200B162F6 /* AlarmMonster */,
 				BDEB7EED1C68A59200B162F6 /* AlarmMonsterTests */,
 				BDEB7EF81C68A59200B162F6 /* AlarmMonsterUITests */,
@@ -134,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BDEB7ED61C68A59200B162F6 /* AppDelegate.swift */,
+				BDF56A9B1C71E32200373A90 /* FMDB */,
 				BDEB7F071C68A66300B162F6 /* UIParts */,
 				BDEB7F081C68A67C00B162F6 /* Model */,
 				BDEB7F091C68A68700B162F6 /* View */,
@@ -143,6 +169,7 @@
 				BDEB7EE21C68A59200B162F6 /* LaunchScreen.storyboard */,
 				BDEB7EE51C68A59200B162F6 /* Info.plist */,
 				BDEB7EDD1C68A59200B162F6 /* AlarmMonster.xcdatamodeld */,
+				BDF56A9C1C71E34F00373A90 /* AlarmMonster-Bridging-Header.h */,
 				BD1D66151C6B541F00BF11E5 /* Supporting Files */,
 			);
 			path = AlarmMonster;
@@ -179,7 +206,8 @@
 		BDEB7F081C68A67C00B162F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BDEB7F1D1C68B4B200B162F6 /* UserDefaultModel.swift */,
+				BDF56A991C71E29600373A90 /* AlarmDBHelper.swift */,
+				BDF56AAF1C71E56900373A90 /* AlarmModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,6 +230,26 @@
 				BDEB7F131C68A77B00B162F6 /* ConfiguredViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BDF56A9B1C71E32200373A90 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				BDF56A9D1C71E34F00373A90 /* FMDatabase.h */,
+				BDF56A9E1C71E34F00373A90 /* FMDatabase.m */,
+				BDF56A9F1C71E34F00373A90 /* FMDatabaseAdditions.h */,
+				BDF56AA01C71E34F00373A90 /* FMDatabaseAdditions.m */,
+				BDF56AA11C71E34F00373A90 /* FMDatabasePool.h */,
+				BDF56AA21C71E34F00373A90 /* FMDatabasePool.m */,
+				BDF56AA31C71E34F00373A90 /* FMDatabaseQueue.h */,
+				BDF56AA41C71E34F00373A90 /* FMDatabaseQueue.m */,
+				BDF56AA51C71E34F00373A90 /* FMDB.h */,
+				BDF56AA61C71E34F00373A90 /* FMResultSet.h */,
+				BDF56AA71C71E34F00373A90 /* FMResultSet.m */,
+				BDF56AA81C71E34F00373A90 /* Info.plist */,
+			);
+			name = FMDB;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +362,7 @@
 				BDEB7EE41C68A59200B162F6 /* LaunchScreen.storyboard in Resources */,
 				BDEB7EE11C68A59200B162F6 /* Assets.xcassets in Resources */,
 				BDEB7EDC1C68A59200B162F6 /* Main.storyboard in Resources */,
+				BDF56AAE1C71E34F00373A90 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +388,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDEB7F0E1C68A70A00B162F6 /* HomeViewController.swift in Sources */,
+				BDF56A9A1C71E29600373A90 /* AlarmDBHelper.swift in Sources */,
+				BDF56AA91C71E34F00373A90 /* FMDatabase.m in Sources */,
 				BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */,
 				BDEB7F161C68A7B400B162F6 /* ConfiguredTableView.swift in Sources */,
+				BDF56AB01C71E56900373A90 /* AlarmModel.swift in Sources */,
+				BDF56AAA1C71E34F00373A90 /* FMDatabaseAdditions.m in Sources */,
 				BDEB7F181C68A81B00B162F6 /* LabelFactory.swift in Sources */,
+				BDF56AAB1C71E34F00373A90 /* FMDatabasePool.m in Sources */,
 				BDEB7F121C68A74700B162F6 /* MonsterSettingViewController.swift in Sources */,
+				BDF56AAC1C71E34F00373A90 /* FMDatabaseQueue.m in Sources */,
 				BDEB7F101C68A72B00B162F6 /* AlarmSettingViewController.swift in Sources */,
-				BDEB7F1E1C68B4B200B162F6 /* UserDefaultModel.swift in Sources */,
 				BDEB7F1A1C68A82D00B162F6 /* SwitchFactory.swift in Sources */,
 				BDEB7EDF1C68A59200B162F6 /* AlarmMonster.xcdatamodeld in Sources */,
+				BDF56AAD1C71E34F00373A90 /* FMResultSet.m in Sources */,
 				BDEB7ED71C68A59200B162F6 /* AppDelegate.swift in Sources */,
 				BDEB7F141C68A77B00B162F6 /* ConfiguredViewController.swift in Sources */,
 				BDEB7F0C1C68A6EF00B162F6 /* FoundationViewController.swift in Sources */,
@@ -489,10 +544,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developers.AlarmMonster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmMonster-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -500,10 +558,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developers.AlarmMonster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmMonster-Bridging-Header.h";
 			};
 			name = Release;
 		};

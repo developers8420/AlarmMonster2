@@ -9,7 +9,6 @@
 import UIKit
 
 class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
-    var model:UserDefaultModel?
     
     // イニシャライザ
     override init(frame: CGRect, style: UITableViewStyle) {
@@ -25,7 +24,6 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
         self.separatorInset = UIEdgeInsetsZero
         
         // UserDefaultの初期化
-        model = UserDefaultModel()
         
         // Selectorは文字列指定
         if (self.respondsToSelector("layoutMargins:")) {
