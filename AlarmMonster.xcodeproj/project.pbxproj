@@ -91,7 +91,6 @@
 		BDF56AA21C71E34F00373A90 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.m"; sourceTree = "<group>"; };
 		BDF56AA31C71E34F00373A90 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.h"; sourceTree = "<group>"; };
 		BDF56AA41C71E34F00373A90 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.m"; sourceTree = "<group>"; };
-		BDF56AA51C71E34F00373A90 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMDB.h"; sourceTree = "<group>"; };
 		BDF56AA61C71E34F00373A90 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../Downloads/fmdb-master/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
 		BDF56AA71C71E34F00373A90 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../Downloads/fmdb-master/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
 		BDF56AA81C71E34F00373A90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../Downloads/fmdb-master/src/fmdb/Info.plist"; sourceTree = "<group>"; };
@@ -243,7 +242,6 @@
 				BDF56AA21C71E34F00373A90 /* FMDatabasePool.m */,
 				BDF56AA31C71E34F00373A90 /* FMDatabaseQueue.h */,
 				BDF56AA41C71E34F00373A90 /* FMDatabaseQueue.m */,
-				BDF56AA51C71E34F00373A90 /* FMDB.h */,
 				BDF56AA61C71E34F00373A90 /* FMResultSet.h */,
 				BDF56AA71C71E34F00373A90 /* FMResultSet.m */,
 				BDF56AA81C71E34F00373A90 /* Info.plist */,

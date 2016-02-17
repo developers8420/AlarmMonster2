@@ -7,3 +7,92 @@
 //
 
 import Foundation
+
+class AlarmDBHelper {
+    private let DB_PATH:String = "alarm.db"
+    private let CREATE_DB_SQL:String = "CREATE TABLE T_ALARM (ID INTEGER PRIMARY KEY AUTOINCREMENT,ALARM TEXT UNIQUE, RUN_FLAG TEXT, REPEAT_FLAG TEXT);"
+    
+     init() {
+        self.createDatabase()
+    }
+    
+    // データベース作成
+    func createDatabase () {
+        // DBファイルのパス
+        let dir:String = self.getDBDirectory()
+        // DBファイルがあるか確認
+        let fileManager:NSFileManager = NSFileManager.defaultManager()
+        if (!fileManager.fileExistsAtPath(dir.stringByAppendingString(DB_PATH))) {
+            // DBファイルがない場合、新規作成
+            let db:FMDatabase = self.getAlarmDatabase()
+            // DB接続
+            db.open()
+            // SQL実行
+            db.executeStatements(CREATE_DB_SQL)
+            // DB切断
+            db.close()
+        }
+    }
+    
+    // DBDirectoryの取得
+    func getDBDirectory() -> String {
+        return NSSearchPathForDirectoriesInDomains(
+            NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.AllDomainsMask,
+            true).first!
+    }
+    
+    //  全件取得
+    func selectAll() -> [Dictionary<String, String>] {
+        // データベースオブジェクトの取得
+        let db:FMDatabase = self.getAlarmDatabase()
+        // SQL作成
+        let sql:String = "SELECT * FROM t_alarm ORDER BY alarm ASC;"
+        // DB接続
+        db.open()
+        // SQL実行
+        let resultSet:FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+        
+        var alarmArray:[Dictionary<String, String>] = [Dictionary<String, String>]()
+        while (resultSet.next()) {
+            var dic:Dictionary<String, String> = Dictionary<String, String>()
+            dic["ID"] = resultSet.stringForColumn("ID")
+            dic["ALRAM"] = resultSet.stringForColumn("ALARM")
+            dic["RUN_FLAG"] = resultSet.stringForColumn("RUN_FLAG")
+            dic["REPEAT_FLAG"] = resultSet.stringForColumn("REPEAT_FLAG")
+            
+            alarmArray.append(dic)
+        }
+        db.close()
+        
+        return alarmArray
+        
+    }
+    
+    // 追加
+    func insert(dic:Dictionary<String, String>) -> Bool {
+        return false
+    }
+    
+    // 更新
+    func update(dic:Dictionary<String, String>) -> Bool {
+        return false
+    }
+    
+    // 削除
+    func delete(dic:Dictionary<String, String>) -> Bool {
+        return false
+    }
+    
+    // １件取得
+    func select(alarmId:Int) -> Dictionary<String, String> {
+        return Dictionary<String, String>()
+    }
+    
+    // Alarmデータベースの新規作成
+    func getAlarmDatabase() -> FMDatabase {
+        let writableDBPath: String = self.getDBDirectory().stringByAppendingString(DB_PATH)
+        return FMDatabase(path: writableDBPath)
+    }
+    
+}
