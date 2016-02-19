@@ -9,7 +9,7 @@
 import UIKit
 
 class SwitchFactory: UISwitch {
-    func planeSwitch(
+    static func planeSwitch(
         rect:CGRect,
         on:Bool,
         delegate:AnyObject,
@@ -23,7 +23,7 @@ class SwitchFactory: UISwitch {
             tag: tag)
     }
 
-    func makeSwitch(
+    static func makeSwitch(
         rect:CGRect,
         on:Bool,
         delegate:AnyObject,

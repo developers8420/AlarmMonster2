@@ -42,7 +42,7 @@ class AlarmDBHelper {
             true).first!
     }
     
-    //  全件取得
+    // 全件取得
     func selectAll() -> [Dictionary<String, String>] {
         // データベースオブジェクトの取得
         let db:FMDatabase = self.getAlarmDatabase()
@@ -71,17 +71,79 @@ class AlarmDBHelper {
     
     // 追加
     func insert(dic:Dictionary<String, String>) -> Bool {
-        return false
+        // データベースオブジェクトの取得
+        let db:FMDatabase = self.getAlarmDatabase()
+        // SQL作成
+        let sql:String = "INSERT INTO T_ALARM (ALARM, RUN_FLAG, REPEAT_FLAG) VALUES (?,?,?)"
+        // DB接続
+        db.open()
+        // トランザクション開始
+        db.beginTransaction()
+        // SQL実行
+        let result:Bool = db.executeUpdate(
+            sql, withArgumentsInArray: [dic["ALARM"]!,
+                                        dic["RUN_FLAG"]!,
+                                        dic["REPEAT_FLAG"]!])
+        if (result) {
+            // コミット
+            db.commit()
+        } else {
+            // ロールバック
+            db.rollback()
+        }
+        // DB切断
+        db.close()
+        
+        return result
     }
     
     // 更新
     func update(dic:Dictionary<String, String>) -> Bool {
-        return false
+        // データベースオブジェクトの取得
+        let db:FMDatabase = self.getAlarmDatabase()
+        // SQL作成
+        let sql:String = "UPDATE T_ALARM SET ALARM = ?, RUN_FLAG = ?, REPEAT_FLAG = ? WHERE ID = ?"
+        // DB接続
+        db.open()
+        // トランザクション開始
+        db.beginTransaction()
+        // SQL実行
+        let result:Bool = db.executeUpdate(
+            sql, withArgumentsInArray: [dic["ALARM"]!,
+                                        dic["RUN_FLAG"]!,
+                                        dic["REPEAT_FLAG"]!,
+                                        dic["ID"]!])
+        if (result) {
+            // コミット
+            db.commit()
+        } else {
+            // ロールバック
+            db.rollback()
+        }
+        return result
     }
     
     // 削除
     func delete(dic:Dictionary<String, String>) -> Bool {
-        return false
+        // データベースオブジェクトの取得
+        let db:FMDatabase = self.getAlarmDatabase()
+        // SQL作成
+        let sql:String = "DELETE FROM T_ALARM WHERE ID = ?"
+        // DB接続
+        db.open()
+        // トランザクション開始
+        db.beginTransaction()
+        // SQL実行
+        let result:Bool = db.executeUpdate(
+            sql, withArgumentsInArray: [dic["ID"]!])
+        if (result) {
+            // コミット
+            db.commit()
+        } else {
+            // ロールバック
+            db.rollback()
+        }
+        return result
     }
     
     // １件取得

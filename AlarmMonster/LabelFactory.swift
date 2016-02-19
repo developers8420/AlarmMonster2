@@ -9,13 +9,12 @@
 import UIKit
 
 class LabelFactory: UILabel {
-    func planeLabel(rect:CGRect,
-                    text:NSString,
+    static func planeLabel(rect:CGRect,
+                    text:String,
                     font:UIFont,
                     textColor:UIColor,
                     textAlignment:NSTextAlignment,
-                    backgroundColor:UIColor,
-                    cornerRadius:CGFloat) -> UILabel {
+                    backgroundColor:UIColor) -> UILabel {
         let label:UILabel = self.makeLabel(
             rect,
             text: text,
@@ -26,8 +25,8 @@ class LabelFactory: UILabel {
         return label
     }
     
-    func roundRectLabel(rect:CGRect,
-                        text:NSString,
+    static func roundRectLabel(rect:CGRect,
+                        text:String,
                         font:UIFont,
                         textColor:UIColor,
                         textAlignment:NSTextAlignment,
@@ -45,8 +44,8 @@ class LabelFactory: UILabel {
         return label
     }
     
-    func makeLabel(rect:CGRect,
-                   text:NSString,
+    static func makeLabel(rect:CGRect,
+                   text:String,
                    font:UIFont,
                    textColor:UIColor,
                    textAlignment:NSTextAlignment,
