@@ -10,8 +10,8 @@ import UIKit
 
 class HomeViewController: FoundationViewController {
     private var alarmDispBtn:UIButton?
-    private var helper:AlarmDBHelper?
-    private var model: AlarmModel?
+    private var helper:AlarmDBHelper
+    private var model: AlarmModel
     
     private let ALARM_IMAGE:String = "めざまし時計アイコン.png"
     private let MONSTER_IMG:String = "設定アイコン.png"
@@ -20,12 +20,16 @@ class HomeViewController: FoundationViewController {
     private let BACK_COLOR:UIColor = UIColor(colorLiteralRed:0.894, green:0.894, blue:0.894, alpha:1.0)
     private let DEFAULT_COLOR:UIColor = UIColor(colorLiteralRed:0.302, green:0.584, blue:0.949, alpha:0.5)
     
+    override required init(coder aDecoder: NSCoder) {
+        helper = AlarmDBHelper()
+        model = AlarmModel()
+        super.init(coder: aDecoder)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        helper = AlarmDBHelper?()
-        model = AlarmModel?()
-        model?.setAlarmArray((helper?.selectAll())!)
+        model.setAlarmArray((helper.selectAll()))
         self.view.backgroundColor = BACK_COLOR
 
         // イメージを乗せるビュー
@@ -44,7 +48,7 @@ class HomeViewController: FoundationViewController {
             viewRect.size.height / 3,
             viewRect.size.width / 3,
             viewRect.size.height / 3)
-        let monsterImage:UIImage = UIImage(contentsOfFile: WATAAME_IMG)!
+        let monsterImage:UIImage = UIImage(named: WATAAME_IMG)!
         let imageView:UIImageView = UIImageView(frame: monsterImageRect)
         imageView.image = monsterImage
         backView.addSubview(imageView)
@@ -57,7 +61,7 @@ class HomeViewController: FoundationViewController {
             60)
         let alarmDisp:UIButton = ButtonFactory.planeButton(
             alarmLabelRect,
-            text:(model?.getFirstAlarm())!,
+            text:(model.getFirstAlarm()),
             delegate:self,
             action:"moveConfigured:",
             tag:3)
@@ -68,8 +72,8 @@ class HomeViewController: FoundationViewController {
         let imageRect:CGRect = CGRectMake(0, 0, 30, 30)
         
         // イメージの設定
-        let alarmSettingImage:UIImage = UIImage(contentsOfFile: ALARM_IMAGE)!
-        let monsterSettingImage:UIImage = UIImage(contentsOfFile: MONSTER_IMG)!
+        let alarmSettingImage:UIImage = UIImage(named: ALARM_IMAGE)!
+        let monsterSettingImage:UIImage = UIImage(named: MONSTER_IMG)!
         
         // ボタンの作成
         let alarmButton:UIButton = ButtonFactory.imageButton(
@@ -96,8 +100,8 @@ class HomeViewController: FoundationViewController {
         
     }
     override func viewWillAppear(animated: Bool) {
-        model?.setAlarmArray(helper.selectRunAlarms)
-        alarmDispBtn?.setTitle(model?.getFirstAlarm(), forState: UIControlState.Normal)
+        model.setAlarmArray(helper.selectRunAlarms())
+        alarmDispBtn?.setTitle(model.getFirstAlarm(), forState: UIControlState.Normal)
     }
     
     // アラーム設定画面へ遷移

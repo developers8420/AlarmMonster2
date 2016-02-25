@@ -69,6 +69,29 @@ class AlarmDBHelper {
         
     }
     
+    func selectRunAlarms() -> [Dictionary<String, String>] {
+        let db:FMDatabase = self.getAlarmDatabase()
+        
+        let sql:String = "SELECT * FROM t_alarm WHERE RUN_FLAG = '1' ORDER BY alarm ASC;"
+        db.open()
+        let results:FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+        
+        var resultAry:[Dictionary<String, String>] = [Dictionary<String, String>]()
+        
+        while (results.next()) {
+            var dic:Dictionary<String, String> = Dictionary<String, String>()
+            dic["ID"] = results.stringForColumn("id")
+            dic["ALARM"] = results.stringForColumn("alarm")
+            dic["RUN_FLAG"] = results.stringForColumn("run_flag")
+            dic["REPEAT_FLAG"] = results.stringForColumn("repeat_flag")
+            
+            resultAry.append(dic)
+        }
+        db.close()
+        
+        return resultAry
+    }
+    
     // 追加
     func insert(dic:Dictionary<String, String>) -> Bool {
         // データベースオブジェクトの取得
