@@ -23,12 +23,12 @@ class AlarmModel {
         }
     }
     
-    // Alarm情報を取得
+    // Alarm情報配列を取得
     func getAlarmArray() -> [Dictionary<String, String>] {
         return alarmArray!
     }
     
-    // 不明
+    // Alarm情報を取得
     func getAlarmDic(indexRow: Int) -> Dictionary<String, String> {
         if (alarmArray!.count > 0) {
             return alarmArray![indexRow] 

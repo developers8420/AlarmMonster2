@@ -44,12 +44,12 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
         fatalError("init(coder:) has not been implemented")
     }
 
-    //
+    // tableSectionの数を設定
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    //
+    // tableSectionに設定するtableRowの数を指定
     func tableView(
         tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +57,7 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
             return (model?.getAlarmArray().count)!
     }
 
-    //
+    // tableRowの中のCellを返す
     func tableView(
         tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -99,13 +99,13 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
             return cell!
     }
     
-    //
+    // tableViewを編集モードに設定
     func tableview(tableView:UITableView,
         commitEditingStyle editingStyle:UITableViewCellEditingStyle,
         forRowAtIndexPath indexPath:NSIndexPath) {
     }
     
-    //
+    // Cellをスワイプした後の表示を作成
     func tableView(tableView:UITableView,
         editActionForRowAtIndexPath indexPath:NSIndexPath) -> [UITableViewRowAction] {
             return [UITableViewRowAction(
@@ -117,7 +117,7 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
             })]
     }
     
-    //
+    // RunFlagを変更する
     func changeRunFlag(sw:UISwitch) {
         var flag:String
         if (sw.on) {

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class NormalButton: UIButton {
-    func planeButton(text:NSString, delegate:AnyObject, action:Selector, tag:NSInteger) -> UIButton {
+class ButtonFactory: UIButton {
+    static func planeButton(frame:CGRect, text:NSString, delegate:AnyObject, action:Selector, tag:NSInteger) -> UIButton {
         // ボタン作成
         let button:UIButton = UIButton(type: UIButtonType.RoundedRect)
         button.setTitle(text as String, forState: UIControlState.Normal)
@@ -40,7 +40,7 @@ class NormalButton: UIButton {
     }
     
     // 画像ボタン作成
-    func imageButton(img:UIImage, isHighlighte:Bool, on_img:UIImage, delegate:AnyObject, action:Selector, tag:NSInteger) -> UIButton {
+    static func imageButton(frame:CGRect, img:UIImage, isHighlighte:Bool, on_img:UIImage, delegate:AnyObject, action:Selector, tag:NSInteger) -> UIButton {
         // ボタン作成
         let button:UIButton = UIButton(type: UIButtonType.Custom)
         // ボタンのフレームを指定

@@ -25,7 +25,7 @@
 		BDEB7F161C68A7B400B162F6 /* ConfiguredTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F151C68A7B400B162F6 /* ConfiguredTableView.swift */; };
 		BDEB7F181C68A81B00B162F6 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */; };
 		BDEB7F1A1C68A82D00B162F6 /* SwitchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */; };
-		BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */; };
+		BDEB7F1C1C68A87700B162F6 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB7F1B1C68A87700B162F6 /* ButtonFactory.swift */; };
 		BDF56A981C71E26500373A90 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF56A971C71E26500373A90 /* libsqlite3.dylib */; };
 		BDF56A9A1C71E29600373A90 /* AlarmDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF56A991C71E29600373A90 /* AlarmDBHelper.swift */; };
 		BDF56AA91C71E34F00373A90 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56A9E1C71E34F00373A90 /* FMDatabase.m */; };
@@ -79,7 +79,7 @@
 		BDEB7F151C68A7B400B162F6 /* ConfiguredTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguredTableView.swift; sourceTree = "<group>"; };
 		BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchFactory.swift; sourceTree = "<group>"; };
-		BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
+		BDEB7F1B1C68A87700B162F6 /* ButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 		BDF56A971C71E26500373A90 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		BDF56A991C71E29600373A90 /* AlarmDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDBHelper.swift; sourceTree = "<group>"; };
 		BDF56A9C1C71E34F00373A90 /* AlarmMonster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmMonster-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -197,7 +197,7 @@
 			children = (
 				BDEB7F171C68A81B00B162F6 /* LabelFactory.swift */,
 				BDEB7F191C68A82D00B162F6 /* SwitchFactory.swift */,
-				BDEB7F1B1C68A87700B162F6 /* NormalButton.swift */,
+				BDEB7F1B1C68A87700B162F6 /* ButtonFactory.swift */,
 			);
 			name = UIParts;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				BDEB7F0E1C68A70A00B162F6 /* HomeViewController.swift in Sources */,
 				BDF56A9A1C71E29600373A90 /* AlarmDBHelper.swift in Sources */,
 				BDF56AA91C71E34F00373A90 /* FMDatabase.m in Sources */,
-				BDEB7F1C1C68A87700B162F6 /* NormalButton.swift in Sources */,
+				BDEB7F1C1C68A87700B162F6 /* ButtonFactory.swift in Sources */,
 				BDEB7F161C68A7B400B162F6 /* ConfiguredTableView.swift in Sources */,
 				BDF56AB01C71E56900373A90 /* AlarmModel.swift in Sources */,
 				BDF56AAA1C71E34F00373A90 /* FMDatabaseAdditions.m in Sources */,
