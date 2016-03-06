@@ -47,7 +47,7 @@ class AlarmDBHelper {
         // データベースオブジェクトの取得
         let db:FMDatabase = self.getAlarmDatabase()
         // SQL作成
-        let sql:String = "SELECT * FROM t_alarm ORDER BY alarm ASC;"
+        let sql:String = "SELECT * FROM T_ALARM ORDER BY ALARM ASC;"
         // DB接続
         db.open()
         // SQL実行
@@ -57,7 +57,7 @@ class AlarmDBHelper {
         while (resultSet.next()) {
             var dic:Dictionary<String, String> = Dictionary<String, String>()
             dic["ID"] = resultSet.stringForColumn("ID")
-            dic["ALRAM"] = resultSet.stringForColumn("ALARM")
+            dic["ALARM"] = resultSet.stringForColumn("ALARM")
             dic["RUN_FLAG"] = resultSet.stringForColumn("RUN_FLAG")
             dic["REPEAT_FLAG"] = resultSet.stringForColumn("REPEAT_FLAG")
             
@@ -72,7 +72,7 @@ class AlarmDBHelper {
     func selectRunAlarms() -> [Dictionary<String, String>] {
         let db:FMDatabase = self.getAlarmDatabase()
         
-        let sql:String = "SELECT * FROM t_alarm WHERE RUN_FLAG = '1' ORDER BY alarm ASC;"
+        let sql:String = "SELECT * FROM T_ALARM WHERE RUN_FLAG = '1' ORDER BY ALARM ASC;"
         db.open()
         let results:FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
         
@@ -80,10 +80,10 @@ class AlarmDBHelper {
         
         while (results.next()) {
             var dic:Dictionary<String, String> = Dictionary<String, String>()
-            dic["ID"] = results.stringForColumn("id")
-            dic["ALARM"] = results.stringForColumn("alarm")
-            dic["RUN_FLAG"] = results.stringForColumn("run_flag")
-            dic["REPEAT_FLAG"] = results.stringForColumn("repeat_flag")
+            dic["ID"] = results.stringForColumn("ID")
+            dic["ALARM"] = results.stringForColumn("ALARM")
+            dic["RUN_FLAG"] = results.stringForColumn("RUN_FLAG")
+            dic["REPEAT_FLAG"] = results.stringForColumn("REPEAT_FLAG")
             
             resultAry.append(dic)
         }

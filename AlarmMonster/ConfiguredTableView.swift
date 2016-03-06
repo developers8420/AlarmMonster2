@@ -10,14 +10,16 @@ import UIKit
 
 class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     // AlarmModel
-    private var model:AlarmModel?
+    private var model:AlarmModel
     // AlarmDBHelper
-    private var helper:AlarmDBHelper?
+    private var helper:AlarmDBHelper
     // HIDDEN_COLOR
     private let HIDDEN_COLOR = UIColor(colorLiteralRed: 0.808, green: 0.859, blue: 0.851, alpha: 0.5)
     
     // イニシャライザ
     override init(frame: CGRect, style: UITableViewStyle) {
+        model = AlarmModel()
+        helper = AlarmDBHelper()
         // スーパークラスのイニシャライザ呼び出し
         super.init(frame: frame, style: style)
         // dataSourceに自クラスのオブジェクトを設定
@@ -54,7 +56,7 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
         tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             //model.getAlarmSettingAry.count
-            return (model?.getAlarmArray().count)!
+            return (model.getAlarmArray().count)
     }
 
     // tableRowの中のCellを返す
@@ -73,7 +75,7 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
             let cellRect:CGRect = CGRectMake(0, 0, self.frame.size.width, 40)
             let cellView:UIView = UIView(frame: cellRect)
             
-            let alarm:String = model!.getAlarm(indexPath.row)
+            let alarm:String = model.getAlarm(indexPath.row)
             let alarmRect:CGRect = CGRectMake(5, 5, 100, 30)
             let alarmLabel:UILabel = LabelFactory.planeLabel(
                 alarmRect,
@@ -83,7 +85,7 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
                 textAlignment: NSTextAlignment.Center,
                 backgroundColor: UIColor.clearColor())
             var flag:Bool
-            if (model?.getRunFlag(indexPath.row) == "1") {
+            if (model.getRunFlag(indexPath.row) == "1") {
                 flag = true
             } else {
                 flag = false
@@ -110,11 +112,11 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
         editActionForRowAtIndexPath indexPath:NSIndexPath) -> [UITableViewRowAction] {
             return [UITableViewRowAction(
                 style: UITableViewRowActionStyle.Destructive,
-                title: "削除",
-                handler: {(action:UITableViewRowAction, indexPath:NSIndexPath) in
-                    self.helper!.delete((self.model?.getAlarmDic(indexPath.row))!)
+                title: "削除") {
+                    action, indexPath in
+                    self.helper.delete((self.model.getAlarmDic(indexPath.row)))
                     self.reloadModelView()
-            })]
+            }]
     }
     
     // RunFlagを変更する
@@ -125,16 +127,16 @@ class ConfiguredTableView: UITableView, UITableViewDataSource, UITableViewDelega
         } else {
             flag = "0"
         }
-        var takeDic:Dictionary<String, String> = (model?.getAlarmDic(sw.tag))!
+        var takeDic:Dictionary<String, String> = (model.getAlarmDic(sw.tag))
         takeDic["RUN_FLAG"] = flag
         
-        helper?.update(takeDic)
+        helper.update(takeDic)
         self.reloadModelView()
     }
     
     // 
     func reloadModelView () {
-        model?.setAlarmArray((helper?.selectAll())!)
+        model.setAlarmArray((helper.selectAll()))
         self.reloadData()
     }
     

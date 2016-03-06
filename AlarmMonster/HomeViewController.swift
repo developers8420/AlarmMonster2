@@ -20,7 +20,7 @@ class HomeViewController: FoundationViewController {
     private let BACK_COLOR:UIColor = UIColor(colorLiteralRed:0.894, green:0.894, blue:0.894, alpha:1.0)
     private let DEFAULT_COLOR:UIColor = UIColor(colorLiteralRed:0.302, green:0.584, blue:0.949, alpha:0.5)
     
-    override required init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         helper = AlarmDBHelper()
         model = AlarmModel()
         super.init(coder: aDecoder)!
@@ -63,7 +63,7 @@ class HomeViewController: FoundationViewController {
             alarmLabelRect,
             text:(model.getFirstAlarm()),
             delegate:self,
-            action:"moveConfigured:",
+            action:"moveConfigured",
             tag:3)
         alarmDisp.backgroundColor = DEFAULT_COLOR
         self.view.addSubview(alarmDisp)
@@ -73,7 +73,7 @@ class HomeViewController: FoundationViewController {
         
         // イメージの設定
         let alarmSettingImage:UIImage = UIImage(named: ALARM_IMAGE)!
-        let monsterSettingImage:UIImage = UIImage(named: MONSTER_IMG)!
+        //let monsterSettingImage:UIImage = UIImage(named: MONSTER_IMG)!
         
         // ボタンの作成
         let alarmButton:UIButton = ButtonFactory.imageButton(
@@ -82,18 +82,21 @@ class HomeViewController: FoundationViewController {
             isHighlighte: true,
             on_img: alarmSettingImage,
             delegate: self,
-            action: "moveAlarmSetting:",
+            action: "moveAlarmSetting",
             tag: 1)
+        
+        /* モンスター設定画面はお亡くなりになりました。
         let monsterButton:UIButton = ButtonFactory.imageButton(
             imageRect,
             img: monsterSettingImage,
             isHighlighte: true,
             on_img: monsterSettingImage,
             delegate: self,
-            action: "moveAlarmSetting:",
+            action: "moveMonsterSetting",
             tag: 2)
+        */
         // バーボタンの作成
-        let alarmBarButton:UIBarButtonItem = UIBarButtonItem()
+        let alarmBarButton:UIBarButtonItem = UIBarButtonItem(customView: alarmButton)
         
         // バーボタンの設定
         self.navigationItem.rightBarButtonItem = alarmBarButton
